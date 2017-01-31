@@ -12,7 +12,7 @@ def crawler():
     for link in soup.findAll('a', {'class':'image'}):
         href=link.get('href')
         nm=link.get('title')
-        name=nm[9:]
+        name=nm[9:]#Truncates the filename
         link = ("https://www.wikipedia.org"+(href))
         crawl2(link, name)
         
